@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "647627347924",
+    "project_id": "quizx-fb763",
+    "storage_bucket": "quizx-fb763.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647627347924:android:4486b3a791306744042841",
+        "android_client_info": {
+          "package_name": "com.example.sih_2022demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647627347924-1nj8c6s998d6gk2683ia53s5hjoifebc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sih_2022demo",
+            "certificate_hash": "43e6132c417c212dee2d16428017f47b37f38580"
+          }
+        },
+        {
+          "client_id": "647627347924-90l03hti9cac5v7jok0fj6r4bsjhl551.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHIzxyLdlTQOfIC5QWDGWmzeq77dKaSd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647627347924-90l03hti9cac5v7jok0fj6r4bsjhl551.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "647627347924-kbbtgj0ntatj9nh6avl8psk6de534src.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codefox.quizzle"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
