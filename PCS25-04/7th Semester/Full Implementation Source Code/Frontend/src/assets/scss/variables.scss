@@ -1,0 +1,623 @@
+@import "./color";
+@import "./mixins";
+@import "./font";
+
+$mobile-breakpoint: 750px;
+$tablet-breakpoint: 1025px;
+$desktop-breakpoint: 1150px;
+$small-mobile-breakpoint: 350px;
+$desktop-maxWidth: 1920px;
+
+$border--nav: #dedede;
+
+$boxshadow--navitems: 5px 9px 7px rgba(0, 0, 0, 0.37);
+
+$color--skyBlue: #0fe4de;
+$color--purple: #1b1464;
+$color--green: #0de79b;
+$color--greyLight: #f1f1f1;
+$color--greyLightRowItem: #f5f5f5;
+$color--grey: #5c5b60;
+
+$border-row: 1px solid #e1e1e1;
+
+@mixin inputBoxDesign {
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(202, 202, 202, 0.25);
+  border-radius: 10px;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  outline: 0;
+  &::placeholder {
+    font-size: 14px;
+    color: black;
+    font-family: $font-family;
+  }
+}
+
+@mixin uploadInputHidden {
+  input {
+    display: none;
+  }
+  p {
+    font-size: 12px;
+    margin: 0;
+    background-color: $color--skyBlue;
+    padding: 4px 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+@mixin borderRow {
+  border-bottom: $border-row;
+}
+
+@mixin resetTable {
+  table,
+  thead,
+  tr,
+  th,
+  td {
+    all: unset;
+  }
+}
+
+@mixin table {
+  table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+  }
+  thead {
+    position: relative;
+  }
+  thead,
+  tbody {
+    display: table-header-group;
+    vertical-align: middle;
+  }
+  tr {
+    display: table-row;
+    vertical-align: middle;
+    &:not(:last-child),
+    &:first-child {
+      @include borderRow;
+    }
+  }
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: $color--greyLight;
+      }
+    }
+    &[class^="noCursor"] {
+      tr {
+        cursor: unset;
+      }
+    }
+  }
+  table.noHover {
+    tr {
+      &:hover {
+        background-color: unset;
+      }
+    }
+  }
+  table.alignTop {
+    tr {
+      vertical-align: top;
+    }
+  }
+  th {
+    img {
+      vertical-align: middle;
+    }
+  }
+  th {
+    width: 150px;
+    display: table-cell;
+    padding: 12px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $color--purple;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  th > div {
+    white-space: nowrap;
+  }
+  td {
+    display: table-cell;
+    text-align: left;
+    padding: 12px 6px;
+    vertical-align: inherit;
+    > div {
+      width: max-content;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      max-width: 162px;
+      overflow-wrap: break-word;
+      min-width: 125px;
+    }
+
+    .icon {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  td[class="highlight"],
+  td.highlight {
+    > div {
+      font-weight: 500;
+      span {
+        color: rgba($color--grey, 0.7);
+      }
+    }
+  }
+
+  td[class="unsetMax"],
+  td.unsetMax {
+    > div {
+      max-width: 250px;
+    }
+  }
+
+  td.center,
+  th.center,
+  td[class="center"],
+  th[class="center"] {
+    text-align: center;
+    font-size: 12px;
+    > div {
+      max-width: unset;
+    }
+  }
+
+  td[class="bigTd"] {
+    min-width: 200px;
+    > div {
+      min-width: 200px;
+    }
+  }
+
+  [class="pricingInput"] {
+    @include hideNumberInput;
+    display: flex;
+    gap: 3px;
+    font-weight: bold;
+    > div {
+      flex: 1;
+    }
+  }
+
+  td[class="systemGenerated"] {
+    > div {
+      color: $color--purple;
+      font-weight: bold;
+      span {
+        text-align: center;
+        font-weight: normal;
+        font-size: 8px;
+        color: black;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  td[class="entityType"] {
+    > div {
+      color: $color--purple;
+      font-weight: bold;
+      span {
+        text-align: center;
+        font-size: 8px;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  th.center,
+  td.center {
+    text-align: center;
+    > div {
+      max-width: unset;
+    }
+  }
+
+  td[class^="idx"] {
+    width: 30px;
+    > div {
+      text-align: left;
+      width: 50px;
+      min-width: unset;
+    }
+  }
+
+  td.idx,
+  th.idx {
+    width: 30px;
+
+    > div {
+      text-align: left;
+      width: 50px;
+      min-width: unset;
+    }
+  }
+
+  td[class="lg-idx"] {
+    width: 30px;
+    > div {
+      text-align: left;
+      width: 150px;
+      min-width: unset;
+    }
+  }
+  th,
+  td {
+    svg {
+      font-size: 18px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+
+  td.valueColor {
+    @include valueColor;
+  }
+
+  td.statusChipsTd,
+  th.statusChipsTd {
+    > div {
+      width: 100%;
+    }
+    .statusChips {
+      margin: 0;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: unset;
+    font-size: 12px;
+    border-radius: 4px;
+    &::placeholder {
+      color: $color--grey;
+      font-size: 12px;
+    }
+  }
+
+  .dropdown {
+    > div {
+      background-color: white;
+    }
+
+    select {
+      font-size: 12px;
+      color: unset;
+    }
+  }
+
+  td[class^="noPadding"] {
+    padding: 0px;
+  }
+}
+
+@mixin tableLayout {
+  @include table;
+  overflow-x: auto;
+  width: 100%;
+  @include hideScrollbar;
+}
+
+@mixin pagination {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color--greyLight;
+  flex-flow: row wrap;
+  padding: 10px 30px;
+  border-radius: 0 0 10px 10px;
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    &.link {
+      &:hover {
+        color: $color--purple;
+        opacity: 0.5;
+        scale: 1.2;
+        cursor: pointer;
+      }
+    }
+    &:nth-child(2) {
+      @include forMobile {
+        display: none;
+      }
+    }
+  }
+
+  @include forMobile {
+    p:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@mixin forMobile {
+  @media (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin hideNumberInput {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@mixin summaryList {
+  display: grid;
+  place-content: center;
+  > div {
+    display: flex;
+    overflow: auto;
+    // justify-content: center;
+    // margin: auto;
+    // margin-bottom: 10px;
+    // border-radius: 4px;
+    // box-shadow: 0px 2px 7px rgba(175, 175, 175, 1);
+    padding: 10px 0;
+    // width: fit-content;
+    // background-color: rgba($color--purple, 0.8);
+  }
+}
+
+@mixin forTablet {
+  @media (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin valueColor {
+  div.GREEN {
+    color: rgb(0, 198, 0);
+  }
+  div.LIGHT_GREEN {
+    color: rgb(196, 218, 0);
+  }
+  div.ORANGE {
+    color: rgb(251, 165, 6);
+  }
+  div.RED {
+    color: rgb(255, 42, 0);
+  }
+  div.PURPLE {
+    color: $color--purple;
+  }
+}
+
+@mixin valueColorBg {
+  div.GREEN {
+    background-color: rgb(0, 198, 0);
+    color: black;
+  }
+  div.LIGHT_GREEN {
+    background-color: rgb(196, 218, 0);
+    color: black;
+  }
+  div.ORANGE {
+    background-color: rgb(251, 165, 6);
+    color: black;
+  }
+  div.RED {
+    background-color: rgb(255, 42, 0);
+    color: white;
+  }
+  div.PURPLE {
+    background-color: $color--purple;
+    color: white;
+  }
+}
+
+@mixin filterTabStyles {
+  display: flex;
+  flex-flow: row wrap;
+  // margin-bottom: 10px;
+  gap: 10px 0;
+  // isolation: isolate;
+
+  .checkbox {
+    height: 36px;
+    align-self: flex-end;
+    width: clamp(150px, 100%, 150px);
+    box-sizing: border-box;
+    border-radius: 0px;
+    border-color: #e5e5e5;
+    box-shadow: unset;
+    margin-left: -1px;
+    border: 1px solid #e5e5e5;
+    label {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      input {
+        height: 15px;
+        width: 15px;
+      }
+    }
+    display: grid;
+    place-content: center;
+  }
+  .toggle {
+    border: none;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    label {
+      font-size: 12px;
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  .leftMarginAuto {
+    margin-left: auto;
+  }
+
+  .input {
+    width: unset;
+
+    input {
+      @include inputBoxDesign;
+      border: 1px solid #e5e5e5;
+      border-radius: 0;
+      margin-left: -1px;
+      padding: 10px;
+      box-shadow: unset;
+      height: 100%;
+      &::placeholder {
+        font-size: 12px;
+      }
+      font-size: 12px;
+    }
+  }
+
+  .select {
+    width: clamp(150px, 100%, 150px);
+    box-sizing: border-box;
+    h4 {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+    > div {
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      border-radius: 0px;
+      border-color: #e5e5e5;
+      box-shadow: unset;
+      margin-left: -1px;
+      height: 36px;
+    }
+    select {
+      font-size: 12px;
+      vertical-align: middle;
+      color: black;
+    }
+  }
+
+  .filterButton,
+  [class^="filterButton"] {
+    border-radius: 0;
+    height: 36px;
+    &.revert {
+      background-color: $color--skyBlue;
+      color: black;
+      &:hover {
+        background-color: $color--purple;
+        color: white;
+      }
+    }
+    &.report {
+      margin-left: auto;
+    }
+  }
+
+  .multiSelect {
+    border: 1px solid #e5e5e5;
+    width: clamp(150px, 100%, 150px);
+    margin-left: -1px;
+    height: 36px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+}
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@mixin headerStyle {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+  h3 {
+    margin: 0;
+    margin-right: auto;
+  }
+  .showFilter {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: $color--purple;
+    // margin: 0;
+
+    &:hover {
+      opacity: 0.5;
+      text-decoration: underline;
+    }
+
+    svg {
+      font-size: 12px;
+    }
+  }
+  .search {
+    flex: 1;
+    height: fit-content;
+  }
+  .dropdownSelect {
+    h4 {
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+@mixin reconHealthIcon {
+  .OK {
+    svg {
+      color: green;
+    }
+  }
+  .UNCHECKED {
+    svg {
+      color: grey;
+    }
+  }
+  .RESOLVED {
+    svg {
+      color: rgb(20, 68, 20);
+    }
+  }
+  .CRITICAL {
+    svg {
+      color: red !important;
+    }
+  }
+}

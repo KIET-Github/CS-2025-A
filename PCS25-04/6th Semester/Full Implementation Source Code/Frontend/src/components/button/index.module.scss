@@ -1,0 +1,25 @@
+@import "src/assets/scss/variables";
+
+.button {
+  outline: 0;
+  border: 0;
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  // background-color: rgb(94, 93, 93);
+  background-color: #b8a571;
+  color: white;
+  cursor: pointer;
+  min-width: 125px;
+  &:hover {
+    // background-color: $color--skyBlue;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+  &.iconButton {
+    min-width: 60px;
+    height: inherit;
+  }
+}

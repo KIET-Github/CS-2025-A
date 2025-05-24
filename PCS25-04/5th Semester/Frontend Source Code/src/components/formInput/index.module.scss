@@ -1,0 +1,57 @@
+@import "src/assets/scss/variables";
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  font-size: 12px;
+  position: relative;
+  label {
+    margin-bottom: 3px;
+  }
+  input,
+  textarea {
+    max-width: 150px;
+    padding: 4px 6px;
+    outline: 0;
+    border-radius: 3px;
+    border: 1px solid $color--grey;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 12px;
+    width: 100%;
+    height: 25px !important;
+    &:read-only {
+      background-color: rgba($color--grey, 0.1);
+    }
+  }
+  textarea {
+    height: 50px !important;
+    max-width: unset;
+  }
+  @include hideNumberInput;
+
+  &.error {
+    label {
+      color: red;
+    }
+    input,
+    textarea {
+      border-color: red;
+      color: red !important;
+      background-color: rgba(red, 0.05);
+      &::placeholder {
+        color: red !important;
+      }
+    }
+    .errorMessage {
+      margin: 0;
+      margin-top: 3px;
+      color: red;
+      font-size: 12px;
+      white-space: nowrap;
+      position: absolute;
+      margin-top: 26px;
+    }
+  }
+}
