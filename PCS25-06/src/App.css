@@ -1,0 +1,635 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.text-section p {
+  font-size: 18px;
+  color: #335;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.tabs-container {
+  background: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs-wrapper {
+  margin-top: 60px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background-color: white;
+  border: 2px solid #2f5260;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2f5260;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-button.active {
+  background-color: #2f5260;
+  color: white;
+}
+
+.tab-content {
+  border: 2px solid #2f5260;
+  border-top: none;
+  background-color: white;
+  padding: 40px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+}
+
+.icon-placeholder {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.bottom-banner {
+  background-color: #2f5260;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 40px 20px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+}
+
+.tabs-section {
+  margin: 60px auto 0;
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  padding: 12px 24px;
+  background-color: white;
+  border: 2px solid #2f5260;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  color: #2f5260;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  background-color: #2f5260;
+  color: white;
+}
+
+.tab-content {
+  border: 2px solid #2f5260;
+  border-top: none;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.tab-content p {
+  font-size: 1.2rem;
+  color: #2f5260;
+}
+
+.tab-icon {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.bottom-message {
+  margin-top: auto;
+  background-color: #2f5260;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.container {
+  background: linear-gradient(to right, #f4f4f4 50%, #b2ebf2 50%);
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.subheading {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+.days-highlight {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.process-flow {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  margin: 1rem;
+}
+
+.icon {
+  font-size: 2rem;
+  background: #e0e0e0;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.days {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+}
+
+.feedback-loop {
+  background-color: #00bcd4;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.benefits-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+
+.benefits-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d3e50;
+}
+
+.benefit-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  flex: 1 1 220px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-left: 1px dashed #ccc;
+  border-right: 1px dashed #ccc;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  background-color: #294b63;
+  color: white;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-title {
+  font-size: 1.2rem;
+  color: #2d3e50;
+  margin: 0.5rem 0;
+}
+
+.benefit-title .highlight {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.benefits-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+
+.benefits-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d3e50;
+}
+
+.benefit-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  flex: 1 1 220px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-left: 1px dashed #ccc;
+  border-right: 1px dashed #ccc;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  background-color: #294b63;
+  color: white;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-title {
+  font-size: 1.2rem;
+  color: #2d3e50;
+  margin: 0.5rem 0;
+}
+
+.benefit-title .highlight {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 35%;
+  background-color: #2e4c5b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.right-panel {
+  width: 65%;
+  background: #f4f7f9;
+  padding: 1rem;
+}
+
+.app-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 20%;
+  background: #f0f4f8;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.new-message {
+  background: linear-gradient(to right, #00aaff, #00f0ff);
+  border: none;
+  padding: 0.7rem;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.message-list {
+  width: 30%;
+  border-right: 1px solid #eee;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.message-item {
+  background: white;
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+}
+
+.message-item h4 {
+  margin: 0 0 0.3rem 0;
+}
+
+.message-view {
+  width: 50%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-body h2,
+.message-body h3 {
+  margin: 0.5rem 0;
+}
+
+.attachments {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reply-box {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reply-box input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.reply-box button {
+  background: #00aaff;
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-wrapper {
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #2e4c5b;
+  color: #ffffff;
+}
+
+.hero-section {
+  background: #ffffff;
+  color: #2e4c5b;
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d5a73;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  color: #7c8a97;
+  font-size: 1rem;
+}
+
+.discussion-cta {
+  margin: -2rem auto 2rem auto;
+  background: linear-gradient(to bottom right, #e1f0f8, #f2f6f9);
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+  width: 80%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2e4c5b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.discussion-cta h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.discussion-cta button {
+  background: linear-gradient(to right, #007aff, #00e0ff);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.discussion-cta button:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #2e4c5b;
+  color: white;
+}
