@@ -1,0 +1,88 @@
+@import "src/assets/scss/variables";
+
+.modalContainer {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 6;
+  overflow: auto;
+  &.showModal {
+    z-index: 6;
+    transform: scale(1);
+    .modalBackground {
+      background: rgba(0, 0, 0, 0.7);
+      .modal {
+        animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+  }
+
+  .modalBackground {
+    // display: table-cell;
+    background: rgba(0, 0, 0, 0.8);
+    // text-align: center;
+    vertical-align: middle;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .modal {
+      background: white;
+      padding: 20px;
+      display: inline-block;
+      border-radius: 3px;
+      position: relative;
+      width: 80%;
+      max-height: 80vh;
+      overflow: auto;
+    }
+    .smallModal {
+      width: 25%;
+      min-height: 21vh;
+      @include forMobile {
+        width: 70%;
+      }
+    }
+    .mediumModal {
+      width: 45%;
+      min-height: 21vh;
+      @include forMobile {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

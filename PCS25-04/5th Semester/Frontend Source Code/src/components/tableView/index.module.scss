@@ -1,0 +1,36 @@
+@import "src/assets/scss/variables";
+
+.tableRoot {
+  @include resetTable;
+  //   box-shadow: 0px 2px 7px rgba(175, 175, 175, 0.25);
+  border-radius: 4px;
+  //   margin-top: 20px;
+  overflow: hidden;
+  // isolation: isolate;
+  z-index: 1;
+  .list {
+    @include tableLayout;
+  }
+  .pagination {
+    @include pagination;
+    border-radius: 0;
+  }
+}
+
+.pageSize {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  .select {
+    > div {
+      min-width: 50px;
+      background-color: white;
+      padding: 3px 5px;
+      border-radius: 4px;
+      select {
+        text-align: center;
+      }
+    }
+  }
+}
