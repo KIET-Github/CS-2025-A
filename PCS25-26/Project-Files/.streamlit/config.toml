@@ -1,0 +1,11 @@
+[theme]
+primaryColor="#BBE1FA"  # Light blue for primary accents like buttons and highlights
+backgroundColor="#1B262C"  # Dark slate grey for the main background
+secondaryBackgroundColor="#3282B8"  # Medium blue for sidebars or secondary sections
+textColor="#FFFFFF"  # Deep navy blue for text
+font = "sans serif"
+
+
+
+
+
