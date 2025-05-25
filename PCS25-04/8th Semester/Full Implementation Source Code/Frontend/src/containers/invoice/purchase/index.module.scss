@@ -1,0 +1,176 @@
+.container {
+  padding: 30px;
+  color: gray;
+  box-shadow: 10px 8px 8px 10px rgba(180, 180, 180, 0.305);
+  .heading {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(112, 109, 109);
+  }
+
+  .filter {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: flex-end;
+  }
+  .clientContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .clientHeader {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: flex-end;
+      p {
+        font-size: 14px;
+      }
+      input {
+        max-width: 250px !important;
+        width: 250px !important;
+      }
+    }
+  }
+}
+.amountContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .innerContainer {
+    display: flex;
+    gap: 10px;
+
+    .bottomInput {
+      flex: 1;
+      input {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      label {
+        color: black;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.newButtonBox {
+  margin-top: 10px;
+  .addNew {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: red;
+    border: 1px solid red;
+  }
+}
+.paymentMethod {
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.amountDue {
+  input {
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+.container2 {
+  padding: 20px;
+  color: gray;
+  //   border: 1px solid gray;
+  // box-shadow: 10px 10px 10px rgba(180, 180, 180, 0.305);
+  .modalHeading2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    h1 {
+      font-size: 18px;
+      padding: 15px;
+    }
+    .rightHeading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .delete {
+        color: red;
+      }
+    }
+  }
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  .content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 2px;
+    h3 {
+      text-decoration: bold;
+      color: white;
+    }
+    span {
+      text-decoration: bold;
+      color: #d5b868;
+      font-size: 12px;
+    }
+  }
+}
+
+.billing {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  h3,
+  p {
+    font-size: 16px;
+  }
+}
+.summaryTable {
+  padding: 10px;
+  tr {
+    border: 1px solid gray;
+  }
+  td {
+    font-size: 12px;
+    // border: 1px solid gray;
+  }
+}
+.table {
+  padding: 10px;
+}
+
+.shipping {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  h3,
+  p {
+    font-size: 16px;
+  }
+}
