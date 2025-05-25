@@ -1,4 +1,0 @@
-The identification and classification of historical monuments are crucial for heritage conservation, tourism, and academic research. However, manual 
-identification is time-consuming and prone to human errors. This project aims to develop an AI-powered heritage identification system using deep learning 
-to recognize and classify monuments based on images. By leveraging a trained neural network and a user-friendly interface via Streamlit, the system will 
-assist researchers, conservationists, and travelers in accurately identifying heritage sites, thereby promoting cultural preservation and awareness.
