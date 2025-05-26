@@ -1,0 +1,618 @@
+*{
+    padding: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap');
+@font-face {
+    font-family: 'Impact Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Impact Regular'), url('./fonts/impact.woff') format('woff');
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #1B1A17;
+    font-family:  'Inconsolata', monospace;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    border-bottom: 2px solid #131211;
+}
+
+nav xmp{
+    font-family: 'Impact Regular';
+    line-height: 39px;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #FF8303;
+    margin-left: 42px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 55px;
+}
+
+nav a{
+    font-size: 20px;
+    color: #F0E3CA;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover{
+    color: #FF8303;
+}
+
+nav a#menu{
+    display: none;
+}
+
+#informacao{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 30px 0px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 90px 20px 90px;
+    gap: 16px;
+}
+
+#sobre h1{
+    font-weight: 900;
+    color: #FF8303;
+    font-size: 60px;
+    line-height: 67px;
+}
+
+#sobre h2{
+    font-weight: 700;
+    color: #F0E3CA;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+#sobre h3{
+    font-weight: 400;
+    color: #F0E3CA;
+    font-size: 19px;
+    line-height: 21px;
+    width: auto;
+}
+
+#codigo{
+    margin: 40px 60px 60px 80px;
+    height: auto;
+
+}
+
+#codigo pre{
+    filter: blur(1px);
+    opacity: 0.8;
+} 
+
+#codigo pre::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+}
+
+
+#historia{
+    border-top: 2px solid #131211;
+    border-bottom: 2px solid #131211;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 80px;
+    gap: 20px;
+}
+
+#historia h1{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
+    color: #F0E3CA;
+}
+
+#minhas-habilidades{
+    border-bottom: 2px solid #131211;
+    padding-bottom: 100px;
+}
+
+#minhas-habilidades h1.titulo{
+    font-size: 32px;
+    font-weight: 700;
+    color: #FF8303;
+    text-align: center;
+    line-height: 34px;
+    padding: 50px;
+}
+
+#habilidades{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #21201D;
+    height: 300px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.card img.hover{
+    display: none;
+}
+
+.card:hover > img.normal{
+    display: none;
+}
+
+.card:hover > img.hover{
+    display: block;
+    transform: scale(1.1);
+}
+
+#projetos{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+#projetos h1{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: center;
+    color: #FF8303;
+    margin-bottom: 50px;
+}
+
+#projetos button.mais{
+    background-color: #FF8303;
+    border-style: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 60px;
+    font-weight: 700;
+    color: #fff;
+    font-family:  'Inconsolata', monospace;
+    font-size: 2rem;
+    box-shadow: 2px 3px 10px 0px rgba(0,0,0,0.75);
+}
+
+#projetos button.mais:hover{
+    background-color: #ce6903;
+}
+
+#sites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+#sites h1{
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+
+#shopify, #netflix, #bikcraft, #wildbeast{
+    display: flex;
+    flex-direction: column;
+    height: 63vh;
+    width: 41vw;
+    background-color: #FF8303;
+}
+
+#sites button{
+    height: auto;
+    background-color: #FF8303;
+    border-style: none;
+    border: 3px solid #ca6b0b;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    order: 1;
+    padding: 5px 10px;
+}
+
+#sites .botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+#sites button:hover{
+    background-color: #d4700b;
+}
+
+footer{
+    padding: 50px 0;
+    border-top: 2px solid #131211;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+#msg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#msg xmp{
+    font-family: 'Impact Regular';
+    line-height: 39px;
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: #FF8303;
+}
+
+#msg h2{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F0E3CA;
+}
+
+#contatos{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 20px;
+    padding: 30px;
+}
+
+#contatos h1{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FF8303;
+}
+
+#contatos ul{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    list-style-type: none;
+    gap: 20px;
+}
+
+#contatos li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contatos a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FF8303;
+}
+
+#contatos a:hover{
+    text-decoration: underline;
+}
+
+#contatos img{
+    Width: 27px;
+    Height: 25px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1114px){
+    nav ul{
+        gap: 25px;
+    }
+}
+
+@media (max-width: 970px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav xmp {
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+
+    #habilidades{
+        margin: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    #sites{
+        flex-direction: column;
+    }
+
+    #shopify, #netflix, #bikcraft, #wildbeast{
+        width: 80vw;
+        height: 450px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #informacao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projetos button.mais {
+        margin-top: 40px;
+    }
+
+    #codigo{
+        margin-left: 40px;
+        font-size: 15px;
+    }
+
+    #habilidades{
+        display: flex;
+        margin-right: 0px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #msg{
+        margin: 0;
+    }
+
+    #msg xmp{
+        align-items: center
+    }
+
+    #contatos{
+        margin-top: 80px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav a#menu{
+        display: flex;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 25px 55px 25px 25px;
+        align-items: center;
+    }
+
+    nav xmp{
+        font-size: 24px;
+        margin: 30px 0px;
+    }
+
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        margin-left: 27%;
+        align-self: center;
+        gap: 60px;
+        padding: 100px 0px;
+        border-top: 2px solid #131211;
+    }
+
+    nav ul{
+        display: none;
+    }
+    
+    nav a{
+        font-size: 20px;
+        color: #F0E3CA;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    nav a:hover{
+        color: #FF8303;
+    }
+
+    .menu.open{
+        display: flex;
+    }
+
+    #sobre{
+        padding: 60px;
+    }
+
+    #sobre h1{
+        font-size: 40px;
+    }
+
+    #sobre h2{
+        font-size: 26px;
+    }
+
+    #sobre h3{
+        font-size: 17px;
+        margin-right: 20px;
+    }
+
+    #codigo{
+        margin: 0;
+        margin-left: 0px;
+    }
+
+    #codigo pre{
+        filter: blur(0);
+        opacity: 0.5;
+    }
+
+    #codigo span{
+        font-size: 8px;
+        padding-left: 0px;
+    }
+
+    #historia img{
+        margin-right: 110px;
+    }
+
+    #historia h1{
+        font-size: 20px;
+        margin-right: 50px;
+    }
+
+    #habilidades{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        background-color: #21201D;
+        justify-content: left;
+        align-items: center;
+        height: 80px;
+        width: 400px;
+        padding: 30px;
+        gap: 15px;
+    }
+
+    .card img{
+        height: 35px;
+    }
+    
+    .card h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 21px;
+        color: #fff;
+        padding: 0;
+    }
+
+    #historia{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0px 50px 60px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #msg{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #sobre {
+        padding: 20px 0px 20px 30px;
+        gap: 8px;
+    }
+
+    #sobre h1 {
+        font-size: 35px;
+    }
+
+    #sobre h2 {
+        font-size: 24px;
+    }
+
+    #sites {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 20px 20px 50px 20px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    nav{
+        padding: 20px 15px;
+        display: flex;
+    }
+    nav xmp{
+        width: 100px;
+        margin: 0;
+        font-size: 28px;
+    }
+
+    #msg h2{
+        font-size: 16px;
+    }
+
+    #contatos{
+        padding: 10px;
+    }
+
+    #contatos a {
+        font-size: 17px;
+    }
+
+    #contatos ul{
+        margin-right: 0px;
+    }
+    #shopify, #netflix, #bikcraft, #wildbeast{
+        width: 85vw;
+        height: 400px;
+    }
+
+    #sites button{
+        height: 100%;
+    }
+}
