@@ -1,0 +1,46 @@
+.nav {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ccbd94;
+  border: 1px solid white;
+  .profileImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px; // Adjust as needed to position below the profile image
+  right: 10px;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.dropdownItem,
+.logout {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+  color: rgb(117, 112, 112);
+  text-align: left;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+.logout {
+  color: red;
+}

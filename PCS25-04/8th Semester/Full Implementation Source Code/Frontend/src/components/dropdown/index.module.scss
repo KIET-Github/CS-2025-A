@@ -1,0 +1,50 @@
+@import "src/assets/scss/variables";
+
+.formDropdown {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  select {
+    max-width: 150px;
+    width: 100%;
+    display: block;
+    padding: 4px 6px;
+    border-radius: 3px;
+    color: $color--grey;
+    background-color: white !important;
+    overflow: hidden;
+    outline: 0;
+    font-size: 12px;
+    height: 25px !important;
+    box-sizing: border-box;
+    border: 1px solid black;
+    &:disabled {
+      background-color: rgba($color--grey, 0.1) !important;
+      color: black;
+    }
+  }
+
+  &.error {
+    label {
+      color: red;
+    }
+    select {
+      border-color: red;
+      color: red;
+      background-color: rgba(red, 0.05) !important;
+      &::placeholder {
+        color: red;
+      }
+    }
+    .errorMessage {
+      margin: 0;
+      margin-top: 3px;
+      color: red;
+    }
+  }
+}

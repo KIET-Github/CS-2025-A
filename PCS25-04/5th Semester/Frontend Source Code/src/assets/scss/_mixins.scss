@@ -1,0 +1,31 @@
+$font-weight: 500;
+$font-size: 14px;
+$theme-color: rgb(57, 145, 238);
+
+@mixin style-header($font-size: normal, $line-height: normal, $font-weight: normal) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 14px;
+}
+
+@mixin style-body($font-size: normal, $line-height: normal, $font-weight: normal) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 12px;
+}
+
+@mixin getThemeBgColor() {
+    background-color: $theme-color;
+}
+
+@mixin getThemeColor() {
+    color: $theme-color;
+}
+
+@mixin getBorderColor {
+    border-color: $theme-color;
+}
+
+@mixin getThemeSvgFit {
+    fill: $theme-color;
+}
