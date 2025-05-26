@@ -1,0 +1,19 @@
+/* src/App.css */
+.error-message {
+  background-color: #fdd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+body {
+  @apply bg-[#0e0e10] text-white font-sans;
+}
+
+.neon-clean {
+  color: #bb86fc;
+  text-shadow:
+    0 0 2px #bb86fc,
+    0 0 8px #9a4dff,
+    0 0 12px #7b2eff;
+}

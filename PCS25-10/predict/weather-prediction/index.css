@@ -1,0 +1,17 @@
+/* Add this to your styles (index.css or any other global CSS file) */
+body {
+    background: 
+      url('gradient.png') no-repeat center center fixed, 
+      black;
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-attachment: fixed;  /* Keeps the background fixed as you scroll */
+  }
+  
+  .neon-text {
+    color: #8a2be2; /* bluish purple (blueviolet) */
+    text-shadow:
+      0 0 5px #8a2be2,
+      0 0 10px #8a2be2,
+      0 0 20px #9400D3,
+      0 0 40px #8a2be2;
+  }
