@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dracula/css/dracula.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <title>Lexaido.AI</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>
+                <xmp><Lexaido AI></xmp>
+            </h1>
+            <a href="#" id="menu"><img src="./img/menu.png" alt="Menu"></a>
+            <ul class="menu">
+                <li><a href="#informacao">info</a></li>
+                <li><a href="#minhas-habilidades">Services</a></li>
+                <li><a href="#contatos">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="informacao">
+            <div id="sobre">
+                <h1>Lexaido.AI</h1>
+                <h2>AI POWERED LEGAL DOCUMENT ASSISTANT</h2>
+                <h3>Revolutionizing the Legal Landscape: Unleash the Power of AI to Transform Your Legal Practice with Smart, Efficient, and Accurate Solutions.</h3>
+            </div>
+            <div id="codigo">
+                <span><pre class="hljs" style="display: block; overflow-x: auto; color: rgb(186, 186, 186);">let <span class="hljs-keyword" style="color: rgb(203, 120, 50);">button_menu </span>= document.querySelector(<span class="hljs-string" style="color: rgb(224, 196, 108);">".header_button"</span>)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+let float_menu = document.querySelector(<span class="hljs-string" style="color: rgb(224, 196, 108);">".header_menu--float"</span>)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+                        
+let line_top = document.querySelector(<span class="hljs-string" style="color: rgb(224, 196, 108);">".header_button_line--top"</span>)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+let line_under = document.querySelector(<span class="hljs-string" style="color: rgb(224, 196, 108);">".header_button_line--bottom"</span>)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+                        
+<span class="hljs-keyword" style="color: rgb(203, 120, 50);">button_menu.isSelected </span>= false<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+                        
+function <span class="hljs-keyword" style="color: rgb(203, 120, 50);">addEffectWriting(element, </span>time) {
+    let element_array = element.innerText.split(<span class="hljs-string" style="color: rgb(224, 196, 108);">""</span>)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+
+    element.count = <span class="hljs-number" style="color: rgb(104, 150, 186);">0</span><span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+    element.innerText = <span class="hljs-string" style="color: rgb(224, 196, 108);">""</span><span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+
+    function writeSymbols() {
+        element.innerText += element_array[element.count]<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+        element.count++<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+
+        if (element.count &lt;= element_array.length) {
+            setTimeout(() =&gt; {
+                writeSymbols()<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+            }, time)<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+        } else if (element.count &gt;= element_array.length) {
+            element.count = <span class="hljs-number" style="color: rgb(104, 150, 186);">0</span><span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+            element.innerText = <span class="hljs-string" style="color: rgb(224, 196, 108);">""</span><span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+
+            writeSymbols()<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+        }
+    }
+    writeSymbols()<span class="hljs-comment" style="color: rgb(127, 127, 127);">;</span>
+}</pre></span>
+            </div>
+        </section>
+
+        <section id="historia">
+            <img src="https://th.bing.com/th/id/OIP.Y1X38r1NKukCc5ekoO9WywHaFj?rs=1&pid=ImgDetMain" alt="Retangulo">
+            <h1>Unlock the potential of smart automation and transform your legal operations, from instant insights for research to predictive analytics that empower your team in navigating complex cases confidently. Say goodbye to time-consuming tasks with automated document creation, and stay compliant effortlessly with real-time monitoring of regulations.
+            </h1>
+        </section>
+        <section id="minhas-habilidades">
+            <h1 class="titulo">Services</h1>
+            <div id="habilidades">
+                <div class="card">
+                    <a href="https://kvrcenbsagt2cwjyvfy5cs.streamlit.app/">
+                        <img src="{{ url_for('static', filename='Images/R-modified.png') }}" heigt="100" width="100" class="normal" alt="Example Image">
+                    </a>
+                    <h1>Case Prediction</h1>
+                </div>
+                <div class="card">
+                    <a href="https://docgenerator-pcvn.onrender.com">
+                        <img src="https://th.bing.com/th/id/OIP.pkjoXIOpnoFBlHn-pyLDlQAAAA?rs=1&pid=ImgDetMain" heigt="100" width="100"  alt="CSS3" class="normal">
+                    </a>
+                    <h1>Doc Generation</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Icon & Message -->
+    <div id="chatbot-container">
+        <div id="chatbot-message">May I help you?</div>
+        <div id="chatbot-icon" onclick="toggleChat()">💬</div>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chat-container">
+        <div id="chat-header">
+            AI Chatbot
+            <button onclick="toggleChat()">✖</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        <div id="msg">
+            <h1><xmp><Lexaido AI></xmp></h1>
+            <h2>Revolutionizing the Legal Landscape</h2>
+        </div>
+        <div id="contatos">
+            <h1>Contact Us</h1>
+            <ul>
+                <li><img src="{{ url_for('static', filename='Images/gmail.png') }}" alt="gmail"> <a href="carloseduardo2006r@gmail.com"
+                        target="_blank">dhruv.sharma3403@gmail.com</a></li>
+                <li><img src="{{ url_for('static', filename='Images/gmail.png') }}" alt="instagram"><a href="https://www.instagram.com/eduardozl.035/"
+                        target="_blank">kirti.2125cs1008@kiet.edu</a></li>
+                <li><img src="{{ url_for('static', filename='Images/gmail.png') }}" alt="github"> <a href="https://github.com/carloseduardori"
+                        target="_blank">priyanshu.2125cs1182@kiet.edu</a></li>
+                <li><img src="{{ url_for('static', filename='Images/gmail.png') }}" alt="github"> <a href="https://github.com/carloseduardori"
+                    target="_blank">mradul.2125cs1002@kiet.edu</a></li>
+            </ul>
+        </div>
+    </footer>
+<script>
+let menuButton = document.querySelector("#menu");
+let menu = document.querySelector(".menu");
+
+menuButton.addEventListener("click", function () {
+    menu.classList.toggle("open");
+});
+
+const botoesTelaCheia = document.querySelectorAll('.botao-tela-cheia');
+const iframes = document.querySelectorAll('iframe');
+
+botoesTelaCheia.forEach((botao, index) => {
+  botao.addEventListener('click', () => {
+    iframes[index].requestFullscreen();
+  });
+});
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
