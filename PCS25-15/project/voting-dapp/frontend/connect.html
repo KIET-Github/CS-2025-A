@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect Wallet - Decentralised Voting Portal</title>
+  <link rel="stylesheet" href="styles/vote.css" />
+</head>
+<body>
+  <!-- Blurred background image -->
+  <div class="background-blur"></div>
+
+  <!-- Top navigation/header -->
+  <div class="topbar">Decentralised Voting App</div>
+
+  <!-- Main connect section wrapped in a box -->
+  <div class="connect-container">
+    <div class="connect-box">
+      <h1>Connect Your Wallet</h1>
+      <p>To vote, please connect your MetaMask wallet:</p>
+      <button id="connectBtn" class="vote-btn">Connect MetaMask Wallet</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script>
+    document.getElementById("connectBtn").addEventListener("click", async () => {
+      if (typeof window.ethereum !== "undefined") {
+        try {
+          await window.ethereum.request({ method: "eth_requestAccounts" });
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const signer = provider.getSigner();
+          const address = await signer.getAddress();
+
+          localStorage.setItem("walletAddress", address);
+          window.location.href = "vote.html";
+        } catch (error) {
+          alert("Connection rejected or error occurred.");
+          console.error(error);
+        }
+      } else {
+        alert("MetaMask not detected!");
+      }
+    });
+  </script>
+</body>
+</html>
