@@ -1,0 +1,53 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+const images = [
+  "https://images.static-collegedunia.com/public/college_data/images/appImage/14962174791443707268KIETNew.jpg?tr=c-force", // Replace with your image URLs
+  "https://tse2.mm.bing.net/th?id=OIP.HwEqRG2Zfnjrtx9eERgk6AHaEU&pid=Api&P=0&h=180",
+  "https://static.zollege.in/public/college_data/images/campusimage/1697871753G-Block%20Image%20(1)-min.jpg?tr=h-313,w-700,c-force",
+];
+
+const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handlebutton =()=>{
+    navigate("/signin")
+  }
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000"
+        style={{ backgroundImage: `url(${images[currentImage]})` }}
+      ></div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-4xl font-bold md:text-6xl">
+          Welcome to Placement Portal
+        </h1>
+        <p className="mt-4 text-xl md:text-2xl">Please log in to continue</p>
+        <button onClick={handlebutton} className="px-5 py-2 hover:bg-gray-900 shadow-md bg-gray-100 text-gray-900 hover:text-gray-100 rounded-md mt-5">
+          {" "}
+          Login{" "}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default LandingPage;

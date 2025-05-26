@@ -1,0 +1,43 @@
+/* Flip card container - set the width and height */
+.flip-card {
+  background-color: transparent;
+  width: 300px; /* Ensure this matches your design needs */
+  height: 200px; /* Ensure this matches your design needs */
+  perspective: 1000px; /* This gives the 3D effect */
+}
+
+/* Container to position the front and back sides */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s; /* Smooth transition */
+  transform-style: preserve-3d; /* Ensures 3D transform happens */
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+/* Front and back sides */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back face when flipping */
+}
+
+/* Style the front side (default view) */
+.flip-card-front {
+  color: black;
+  /* You might want to add background or other styling here */
+}
+
+/* Style the back side (visible after flip) */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg); /* Position it behind initially */
+  /* Add background or other styling here as needed */
+}
