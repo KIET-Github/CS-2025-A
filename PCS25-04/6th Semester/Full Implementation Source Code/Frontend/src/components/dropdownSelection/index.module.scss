@@ -1,0 +1,52 @@
+@import "src/assets/scss/variables";
+
+.root {
+  box-sizing: border-box;
+  div {
+    box-sizing: border-box;
+  }
+}
+.heading {
+  margin-bottom: 3px;
+  font-weight: normal;
+}
+.select {
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(202, 202, 202, 0.25);
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 150px;
+  //   overflow: hidden;
+  padding: 2px 7px;
+  select {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    background-color: white;
+    -webkit-appearance: none;
+    max-width: 250px;
+  }
+  &.disabled {
+    background-color: rgba(gray, 0.1) !important;
+    select {
+      color: black;
+      background-color: rgba(gray, 0) !important;
+    }
+  }
+
+  &.low {
+    select {
+      color: gray;
+      font-weight: normal;
+    }
+  }
+}
+
+h4 {
+  font-size: 12px;
+}

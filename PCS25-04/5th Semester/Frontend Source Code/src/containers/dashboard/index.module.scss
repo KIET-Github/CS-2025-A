@@ -1,0 +1,25 @@
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 20px;
+  .heading {
+    padding: 10px;
+    text-align: center;
+    // text-decoration: dotted underline;
+    h1,
+    h3 {
+      color: rgb(162, 142, 106);
+      padding: 10px;
+    }
+    h3 {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+}
+.dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}

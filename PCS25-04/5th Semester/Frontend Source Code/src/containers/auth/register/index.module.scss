@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #333333, #d9c4a1);
+  .nav {
+    margin-right: auto;
+  }
+  .heading {
+    color: wheat;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .innerContainer {
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  .loginForm {
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 500px;
+    height: fit-content;
+   
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .text {
+      margin-top: 10px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+    }
+    .button {
+      margin-top: 10px;
+      text-align: center;
+    }
+    label {
+      font-size: 16px;
+      margin-bottom: 0px;
+    }
+    .inputBox {
+      display: flex;
+      gap: 5px;
+    }
+    .input {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: rgb(84, 80, 80);
+
+      input {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 16px 12px;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: transparent;
+        box-shadow: none;
+        &::placeholder {
+          color: rgb(84, 80, 80);
+        }
+      }
+    }
+  }
+}

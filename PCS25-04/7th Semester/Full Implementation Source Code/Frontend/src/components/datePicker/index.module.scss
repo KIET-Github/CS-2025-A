@@ -1,0 +1,42 @@
+@import "src/assets/scss/variables";
+
+.formDatePicker {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .datePickerInput {
+    border: 1px solid black;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 4px 6px;
+    max-width: 100%;
+  }
+
+  &.error {
+    label {
+      color: red;
+    }
+    .datePickerInput {
+      border-color: red;
+      color: red;
+      background-color: rgba(red, 0.05);
+      &::placeholder {
+        color: red;
+      }
+    }
+    .errorMessage {
+      margin: 0;
+      margin-top: 3px;
+      color: red;
+    }
+  }
+}
+
+.disabled {
+  background-color: rgba($color--grey, 0.1) !important;
+}

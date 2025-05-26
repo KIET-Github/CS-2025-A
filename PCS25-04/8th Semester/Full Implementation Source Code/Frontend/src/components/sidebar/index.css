@@ -1,0 +1,54 @@
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* Full-height */
+  width: 250px;
+  padding: 10px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(73, 70, 70);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* Links inside the side navigation */
+.sidenav .logoElement {
+  padding: 12px 8px 8px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f5f2f2;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidenav .logoElement:hover {
+  color: #cecaca;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+/* Button to open/close the sidenav */
+.open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+/* When the sidenav is open */
+
+img {
+  padding: 12px;
+  height: 150px;
+  width: 200px;
+}
+.logoElement {
+  display: flex;
+  padding: 10px;
+}

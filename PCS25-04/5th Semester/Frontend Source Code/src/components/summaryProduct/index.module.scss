@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid #d0cfcf;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  h4 {
+    font-size: 18px;
+  }
+  .heading {
+    display: flex;
+    border-bottom: 1px solid #d0cfcf;
+    padding: 2px;
+    color: gray;
+    text-transform: uppercase;
+  }
+  p {
+    padding: 2px;
+    font-size: 16px;
+  }
+}
+.dueDate {
+  td {
+    color: red;
+  }
+}
+
+th {
+  color: gray !important;
+}
