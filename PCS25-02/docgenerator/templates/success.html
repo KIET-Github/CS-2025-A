@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Success</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("/static/images/image.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      color: #FFD580;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .success-container {
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 2px solid #B85C0F;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 20px #B85C0F;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h2 {
+      color: #B85C0F;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: black;
+      color: #FFD580;
+      border: 2px solid #B85C0F;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #B85C0F;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .success-container {
+        padding: 25px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <h2>{{ agreement | capitalize }} Agreement Generated!</h2>
+    <p>Your agreement has been successfully created and emailed to you as a PDF.</p>
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

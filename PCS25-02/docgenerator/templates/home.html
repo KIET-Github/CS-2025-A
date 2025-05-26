@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Agreement Type</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("/static/images/image.png") no-repeat center center fixed;
+      color: #fdd835;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      color: #000;
+      background-color: #fdd835;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #fff176;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Agreement Type</h1>
+    <a href="/ip-agreement" class="button">IP Agreement</a>
+    <a href="/partnership-agreement" class="button">Partnership Agreement</a>
+    <a href="/nda" class="button">Non-Disclosure Agreement</a>
+  </div>
+</body>
+</html>

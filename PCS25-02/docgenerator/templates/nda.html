@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Partnership Agreement Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url("/static/images/image.png") no-repeat center center fixed;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 2px solid #B85C0F;
+      border-radius: 12px;
+      padding: 30px;
+      width: 90%;
+      max-width: 1200px;
+      box-shadow: 0 0 20px #B85C0F;
+    }
+
+    h2 {
+      text-align: center;
+      color: #B85C0F;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      color: #FFD580;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      border: 2px solid #B85C0F;
+      border-radius: 5px;
+      background-color: #B85C0F;
+      color: black;
+      font-weight: bold;
+    }
+
+    input::placeholder {
+      color: black;
+      opacity: 0.8;
+    }
+
+    button {
+      grid-column: span 2;
+      padding: 10px 20px;
+      background-color: black;
+      color: #B85C0F;
+      border: 2px solid #B85C0F;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #B85C0F;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Partnership Agreement Form</h2>
+     <form method="POST" action="/submit/nda">
+    <input name="company_name" placeholder="Disclosing Party Name" required>
+    <input name="company_address" placeholder="Disclosing Party Address" required>
+    
+    <input name="customer_name" placeholder="Receiving Party Name" required>
+    <input name="company_adress" placeholder="Receiving Party Address" required>
+
+    <input name="Transaction" placeholder="Purpose of Disclosure (Transaction)" required>
+    
+    <input name="date" type="date" placeholder="Date of Agreement" required>
+    <input name="Termination_year" type="number" placeholder="Years After Termination to Keep Confidentiality" required>
+    <input name="Expiry_year" type="number" placeholder="Years After Expiry to Keep Confidentiality" required>
+    
+    <input name="email" type="email" placeholder="Your Email" required>
+    
+    <button type="submit">Generate NDA Agreement</button>
+  </form>
+  </div>
+</body>
+</html>
