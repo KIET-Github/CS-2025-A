@@ -1,0 +1,23 @@
+{% load static %}
+<div class="random_videos">
+    <div class="random_title">Other videos</div>
+    <div class="random_videos_container">
+    {%for i in randomVideos%}
+    
+        <a href="{%url 'yt'%}?param1={{i.id}}"> 
+            <div class="video_card"> 
+                <div class="video_img"><img src="{{i.thumbnail}}" alt="" width="239px" height="140px"></div>
+                <div class="video_title">{{i.title}}</div>
+                <hr>
+                <div class="video_duration">
+                    <span class="eye"><i class="fa-regular fa-eye"></i>12K</span>
+                    <span class="clock"><i class="fa-regular fa-clock"></i>1:2:56</span>
+                </div>
+            </div>
+        </a>
+        {%endfor%}
+    </div>
+</div>
+
+
+<!-- {{i.url}} -->

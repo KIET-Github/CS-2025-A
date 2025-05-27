@@ -1,0 +1,47 @@
+{% load static %}
+{% for task in tvideos %}
+<div class="task">
+    <div class="task_title"><span class="topic_name">{{task.task}}</span><span><i id="{{forloop.counter}}" onclick="hideModel(id)" class="fa-solid fa-caret-up"></i></span></div>
+    <div class="task_video" id="hide_div{{forloop.counter}}">
+        {% for video in task.video %}
+        <a href="{{video.url}}">
+            <div class="video_card">
+                <div class="video_img"><img src="{{video.thumbnail}}" alt="" width="239px" height="140px"></div>
+                <div class="video_title">{{video.title}}</div>
+                <hr>
+                <div class="video_desc"></div>
+                <div class="video_duration">
+                    <span class="eye"><i class="fa-regular fa-eye"></i>12K</span>
+                    <span class="clock"><i class="fa-regular fa-clock"></i>{{video.duration}} mins</span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <hr>
+</div>
+{% endfor %}
+<!-- <a href="#">
+    <div class="video_card">
+        <div class="video_img"><img src="{% static 'images/user_image.png'%}" alt="" width="239px" height="140px"></div>
+        <div class="video_title">Django-The perfect course</div>
+        <hr>
+        <div class="video_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus animi excepturi provident pariatur odit harum.</div>
+        <div class="video_duration">
+            <span class="eye"><i class="fa-regular fa-eye"></i>12K</span>
+            <span class="clock"><i class="fa-regular fa-clock"></i>1:2:56</span>
+        </div>
+    </div>
+</a>
+<a href="#">
+    <div class="video_card">
+        <div class="video_img"><img src="{% static 'images/user_image.png'%}" alt="" width="239px" height="140px"></div>
+        <div class="video_title">Django-The perfect course</div>
+        <hr>
+        <div class="video_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus animi excepturi provident pariatur odit harum.</div>
+        <div class="video_duration">
+            <span class="eye"><i class="fa-regular fa-eye"></i>12K</span>
+            <span class="clock"><i class="fa-regular fa-clock"></i>1:2:56</span>
+        </div>
+    </div>
+</a> -->

@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+}
+.task_ls{
+    color: #71c6dd;
+}
+.add_task{
+    background-color: #3F4156;
+    margin-inline: 30px;
+    padding:30px 30px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -6px rgb(0, 0, 0);
+}
+.add_task input, .add_task textarea{
+    width: 97%;
+    display: block;
+    font-size: 18px;
+    padding: 7px 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+    margin-top: 10px;
+    height: 4vh;
+    outline: none;
+}
+.add_task_title{
+    margin-bottom: 10px;
+}
+/* #add_title{
+    margin-top: 10px;
+    height: 4vh;
+    width: 100%;
+    color: #000;
+} */
+.add_task_desc{
+    margin-bottom: 20px;
+}
+/* #add_desc{
+    margin-top: 10px;
+    width: 100%;
+    height: 4vh;
+    color: #000;
+} */
+/* #add_title:focus{
+    color: #000;
+    width: 99%;
+    padding-left: 10px;
+} */
+/* #add_desc:focus{
+    width: 99%;
+    color: #000;
+    padding-left: 10px;
+} */
+#sub_task{
+    /* font-size: 17px;
+    color: black;
+    height: 6vh;
+    width: 10vw;
+    border-radius: 8px;
+    border: none;    
+    box-shadow: 0 0 10px -3px rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease-in-out; */
+    height: 6vh;
+    width: 10vw;
+    background-color: #0c0c0c;
+    color: #03e9f4;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#sub_task:hover{
+    background: #03e9f4;
+      color: #050801;
+      box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 15px #03e9f4, 0 0 30px #03e9f4;
+}
+.task_card_container{
+    margin-inline: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.task_card{
+    padding: 20px 30px;
+    background-color: #3F4156;
+    width: 22vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.task_card:hover{
+    background-color: #3f4156b1;
+    box-shadow: 0 0 10px 1px black;
+}
+.task_card_title{
+    font-size: 20px;
+    color: #71c6dd;
+    margin-bottom: 10px;
+}
+.task_card_desc{
+    margin-bottom: 20px;
+}
+.task_card i{
+    margin-right: 5px;
+}
+.task_share{
+    margin-left: 45%;
+}
+.task_status_share{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.task_share i:hover{
+    color: #71c6dd;
+}
+.fa-check{
+    color: #71c6dd;
+}

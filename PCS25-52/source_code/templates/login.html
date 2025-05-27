@@ -1,0 +1,57 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Design by foolishdeveloper.com -->
+    <title>FlowState</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/explore.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fixed.css'%}">
+
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="wrapper">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <h3>Login Here</h3>
+
+            <label for="username">Username</label>
+            <input type="text" required name="username" placeholder="Email or Phone" id="username">
+
+            <label for="password">Password</label>
+            <input type="password" required name="password" placeholder="Password" id="password">
+
+            <button type="submit">Log In</button>
+            <!-- <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div> -->
+        <h5>Haven't Signed Up Yet?</h5>
+        <center>
+            <a class="registerButton" href="{% url 'register' %}" >Sign Up</a>
+        </center>
+        </form>
+    </div>
+</body>
+
+</html>

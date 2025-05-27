@@ -1,0 +1,59 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>FlowState</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/signup.css'%}">
+    <!-- <link rel="stylesheet" href="{% static 'css/explore.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fixed.css'%}"> -->
+
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Sign Up Here</h3>
+
+        <label>First Name</label>
+        <input type="text" placeholder="First Name" name="fname"  required>
+        
+        <label>Last Name</label>
+        <input type="text" placeholder="Last Name" name="lname" required>
+
+        <label>E-mail address</label>
+        <input type="text" placeholder="email id" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="text" placeholder="Phone Number" name="phone" required>
+
+        <label for="gender">Gender</label><br>
+                    <select id="gender" name="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="custom">Custom</option>
+                    </select>
+
+        <label for="uname">Username</label><br>
+        <input id="uname" type="text" placeholder="Username" name="username" required >
+
+        <label for="dob">Date of Birth</label><br>
+        <input id="dob" type="date" placeholder="Date of Birth" name="dob" required >
+
+        <label for="password">Password</label><br>
+        <input id="password" type="password" placeholder="Password" name="password" required >
+        
+        <label for="password">Re-enter Password</label>
+        <input type="password" placeholder="Enter your Password again" name="cpassword" id="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

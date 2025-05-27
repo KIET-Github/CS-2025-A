@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowState</title>
+    <link rel="stylesheet" href="{% static 'css/explore.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fixed.css'%}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css'%}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        {% include 'left_sidebar.html' %}
+        {% block content %}
+        <div class="main">
+            <div class="main_container">
+
+                {% include 'task_videos.html'%}
+
+                {% include 'random_videos.html'%}
+
+            </div>
+        </div>
+        {% endblock %}
+
+        {% include 'right_sidebar.html' %}
+    
+    </div>
+</body>
+
+
+
+<script src="https://kit.fontawesome.com/695f03e4fd.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/explore.js' %}"></script>
+</html>

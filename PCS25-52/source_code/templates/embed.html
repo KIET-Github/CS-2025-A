@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlowState</title>
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="video-container">
+        <!-- <iframe width="560" height="315" src=`https://www.youtube.com/watch?v=${param1}` frameborder="0" allowfullscreen></iframe> -->
+        <iframe id="myIframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/JxzZxdht-XY" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+    <script>
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const param1 = urlParams.get('param1');
+        // console.log(param1);
+        const urlParams = new URLSearchParams(window.location.search);
+        const param1 = urlParams.get('param1');
+        const iframe = document.getElementById('myIframe');
+        iframe.src = `https://www.youtube.com/embed/${param1}`;
+        console.log(iframe.src)
+        console.log(param1)
+
+        var video = document.getElementById('myIframe');
+        var startTime = 0;
+        var endTime = 0;
+
+        video.addEventListener('play', function() 
+        {
+            startTime = new Date().getTime();
+        });
+
+        video.addEventListener('pause', function() 
+        {
+            endTime = new Date().getTime();
+            var duration = (endTime - startTime) / 1000; // Duration in seconds
+            console.log(duration)
+
+          /*   fetch('/your-django-endpoint/', {
+                 method: 'POST',
+                headers: {
+                     'Content-Type': 'application/json'
+                 },
+                body: JSON.stringify({ duration: duration, video_id: 'VIDEO_ID' })
+             });
+             */
+            
+        });
+        console.log("duration")
+    </script>
+</body>
+</html>
