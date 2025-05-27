@@ -23,6 +23,10 @@ const grievanceSchema = new Schema({
         trim: true,
         minlength: 10,
     },
+    feedback: {
+        type: String,
+        default: "",
+    },
     submittedAt: {
         type: Date,
         default: Date.now

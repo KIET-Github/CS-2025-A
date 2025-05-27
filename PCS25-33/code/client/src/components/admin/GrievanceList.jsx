@@ -2,9 +2,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function GrievanceList({ openModal }) {
+export default function GrievanceList({ openModal, setGrievancesData }) {
     const [grievances, setGrievances] = useState([]);
     const [activeTab, setActiveTab] = useState("pending");
+
+    const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+    const [selectedGrievanceId, setSelectedGrievanceId] = useState(null);
+    const [feedbackText, setFeedbackText] = useState("");
 
     useEffect(() => {
         const fetchGrievances = async () => {
@@ -13,6 +17,7 @@ export default function GrievanceList({ openModal }) {
                     withCredentials: true,
                 });
                 setGrievances(res.data.data);
+                setGrievancesData(res.data.data); // pass to parent
             } catch (error) {
                 console.error("Error fetching grievances:", error);
             }
@@ -20,21 +25,34 @@ export default function GrievanceList({ openModal }) {
         fetchGrievances();
     }, []);
 
-    const handleResolveGrievance = async (id) => {
+    const openFeedbackModal = (id) => {
+        setSelectedGrievanceId(id);
+        setShowFeedbackModal(true);
+    };
+
+    const submitFeedbackAndResolve = async () => {
         try {
             const res = await axios.put(
-                `http://localhost:8000/api/v1/grievances/${id}/mark-as-resolved`,
-                {},
+                `http://localhost:8000/api/v1/grievances/${selectedGrievanceId}/mark-as-resolved`,
+                { feedback: feedbackText },
                 { withCredentials: true }
             );
 
             if (res.data.success) {
                 setGrievances((prev) =>
-                    prev.map((g) => (g._id === id ? { ...g, status: true } : g))
+                    prev.map((g) =>
+                        g._id === selectedGrievanceId
+                            ? { ...g, status: true, feedback: feedbackText }
+                            : g
+                    )
                 );
             }
         } catch (error) {
-            console.error("Error resolving grievance:", error);
+            console.error("Error submitting feedback:", error);
+        } finally {
+            setShowFeedbackModal(false);
+            setFeedbackText("");
+            setSelectedGrievanceId(null);
         }
     };
 
@@ -93,13 +111,19 @@ export default function GrievanceList({ openModal }) {
                                 </td>
                                 <td className="p-3 border">
                                     <div className="flex items-center justify-between">
-                                        <span className={grievance.status ? "text-green-600" : "text-red-500"}>
+                                        <span
+                                            className={
+                                                grievance.status
+                                                    ? "text-green-600"
+                                                    : "text-red-500"
+                                            }
+                                        >
                                             {grievance.status ? "Resolved" : "Pending"}
                                         </span>
                                         {!grievance.status && activeTab === "pending" && (
                                             <button
                                                 className="ml-4 px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600"
-                                                onClick={() => handleResolveGrievance(grievance._id)}
+                                                onClick={() => openFeedbackModal(grievance._id)}
                                             >
                                                 Solve Issue
                                             </button>
@@ -118,6 +142,39 @@ export default function GrievanceList({ openModal }) {
                     </tbody>
                 </table>
             </div>
+
+            {showFeedbackModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-6 w-full max-w-md">
+                        <h2 className="text-lg font-bold mb-4">Provide Feedback</h2>
+                        <textarea
+                            className="w-full border border-gray-300 rounded p-2 mb-4"
+                            rows={4}
+                            placeholder="Enter your feedback..."
+                            value={feedbackText}
+                            onChange={(e) => setFeedbackText(e.target.value)}
+                        />
+                        <div className="flex justify-end gap-4">
+                            <button
+                                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                                onClick={() => {
+                                    setShowFeedbackModal(false);
+                                    setFeedbackText("");
+                                    setSelectedGrievanceId(null);
+                                }}
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                                onClick={submitFeedbackAndResolve}
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

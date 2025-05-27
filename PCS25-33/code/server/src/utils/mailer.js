@@ -14,13 +14,22 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-export const sendGrievanceResolvedEmail = async (grievance, author) => {
+export const sendGrievanceResolvedEmail = async (grievance, author, feedback) => {
     const mailOptions = {
         from: "aditya.pandey.1018@gmail.com", // sender
         to: author.email, // receiver
         subject: 'Your Grievance Has Been Resolved',
-        text: `Dear ${author.name},\n\nYour grievance has been resolved.\n\nGrievance
-        Details:\n${grievance.grievance}\n\nResolved At: ${new Date()}`,
+        text: `Dear ${author.name},
+
+        Your grievance has been resolved.
+
+        Grievance Details:
+        ${grievance.grievance}
+
+        Resolved At: ${new Date()}
+
+        Admin Feedback:
+        ${feedback || 'No feedback provided.'}`,
     };
 
     try {
@@ -29,3 +38,4 @@ export const sendGrievanceResolvedEmail = async (grievance, author) => {
         console.error('Error sending email:', error);
     }
 };
+
