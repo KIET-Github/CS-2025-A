@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowState</title>
+    <link rel="stylesheet" href="{% static 'css/fixed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/task.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css'%}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+    {% include 'left_sidebar.html'%}
+        <div class="main">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="add_task">
+                    <div class="add_task_title">
+                        <label for="title">Title</label><br>
+                        <input id="add_title" type="text" placeholder="Title" name="title" required>
+                    </div>
+                    <div class="add_task_desc">
+                        <label for="desc">Description</label><br>
+                        <input id="add_desc" type="text" placeholder="Description" name="description" required>
+                    </div>
+                    <div class="submit_task cc">
+                        <input id="sub_task" type="submit" value="Add task" name="submit">
+                    </div>
+                </div>
+            </form>
+         
+            <div class="task_card_container">
+                {% if tasks|length == 0 %}
+                <h1><pre>
+
+
+
+                            No tasks yet.
+                            Begin planning your day.
+                </pre>
+                </h1>
+                {% endif %}
+                {% for task in tasks %}
+
+                <div class="task_card">
+                    <div class="task_card_title"> {{task.title}}</div>
+                    <div class="task_card_desc"> {{task.description}}</div>
+                    <div>
+                        <span class="task_status">
+                            <i class="fa-solid fa-check"></i>Completed
+                        </span>
+                        <span class="task_share">
+                            <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                        </span>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    {% include 'right_sidebar.html'%}
+
+    </div>
+</body>
+
+
+
+<script src="https://kit.fontawesome.com/695f03e4fd.js" crossorigin="anonymous"></script>
+<script src="/js/explore.js"></script>
+</html>

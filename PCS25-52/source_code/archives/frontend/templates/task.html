@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowState</title>
+    <link rel="stylesheet" href="/css/fixed.css">
+    <link rel="stylesheet" href="/css/task.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav_logo cc">Flowstate</div>
+            <div class="nav_user cc">
+                <div class="user_img"><img src="/images/user_image.png" alt="" width="36px" height="36px"></div>
+                    <div class="user">
+                        <a class="name" href="#">Prabhakar Mishra</a><br>
+                        <a class="user_name" href="#">@_p_mishra</a>
+                    </div>
+                <div class="dropdown_icon"><i class="fa-solid fa-caret-down"></i></div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left_sidebar">
+            <div class="ls_container">
+                <a href="#"><div class="profile_ls ls">Profile</div></a>
+                <a href="/templates/explore.html"><div class="explore_ls ls">Explore</div></a>
+                <a href="/templates/community.html"><div class="community_ls ls">Community</div></a>
+                <a href="/templates/task.html"><div class="task_ls ls">Task</div></a>
+                <a href="#"><div class="notification_ls ls">Notifications</div></a>
+                <a href="#"><div class="saved_ls ls">Saved</div></a>
+                <a href="#"><div class="doubt_ls ls">Doubts</div></a>   
+            </div>
+        </div>
+        <div class="main">
+            <div class="add_task">
+                <div class="add_task_title">
+                    <label for="title">Title</label><br>
+                    <input id="add_title" type="text" placeholder="Title" name="title">
+                </div>
+                <div class="add_task_desc">
+                    <label for="desc">Description</label><br>
+                    <input id="add_desc" type="text" placeholder="Description" name="desc">
+                </div>
+                <div class="submit_task cc">
+                    <input id="sub_task" type="submit" value="Add task" name="submit">
+                </div>
+            </div>
+            <div class="task_card_container">
+                <div class="task_card">
+                    <div class="task_card_title">Python</div>
+                    <div class="task_card_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, perspiciatis.</div>
+                    <div>
+                        <span class="task_status">
+                            <i class="fa-solid fa-check"></i>Completed
+                        </span>
+                        <span class="task_share">
+                            <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="task_card">
+                    <div class="task_card_title">Python</div>
+                    <div class="task_card_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, perspiciatis.</div>
+                    <div class="task_status_share">
+                        <span class="task_status">
+                            <i class="fa-solid fa-check"></i>Completed
+                        </span>
+                        <span class="task_share">
+                            <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="task_card">
+                    <div class="task_card_title">Python</div>
+                    <div class="task_card_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, perspiciatis.</div>
+                    <div class="task_status_share">
+                        <span class="task_status">
+                            <i class="fa-solid fa-xmark"></i>Not Completed
+                        </span>
+                        <span class="task_share">
+                            <a href="#"><i class="fa-solid fa-share"></i>Share</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_sidebar">
+            <div class="hots">
+                <div class="hot_head">Trending Hots</div>
+                <div class="hot_container">
+                    <a href="#">
+                        <div class="hot_content">
+                        <!-- <div class="hot_title">Hot Title</div> -->
+                        <div class="hot_lines">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, molestiae.</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hot_content">
+                        <!-- <div class="hot_title">Hot Title</div> -->
+                        <div class="hot_lines">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, molestiae.</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hot_content">
+                        <!-- <div class="hot_title">Hot Title</div> -->
+                        <div class="hot_lines">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, molestiae.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr id="right_sidebar_hr">
+            <div class="blogs">
+                <div class="blog_head">Blogs</div>
+                <div class="blog_container">
+                    <a href="#">
+                        <div class="blog_content">
+                        <div class="blog_title">Blog Title</div>
+                        <div class="site_name">www.geeksforgeeks.com</div>
+                        <div class="blog_desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam assumenda tenetur vel corporis natus veritatis labore repellendus, maxime consequuntur culpa?</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="blog_content">
+                        <div class="blog_title">Blog Title</div>
+                        <div class="site_name">www.geeksforgeeks.com</div>
+                        <div class="blog_desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam assumenda tenetur vel corporis natus veritatis labore repellendus, maxime consequuntur culpa?</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="blog_content">
+                        <div class="blog_title">Blog Title</div>
+                        <div class="site_name">www.geeksforgeeks.com</div>
+                        <div class="blog_desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam assumenda tenetur vel corporis natus veritatis labore repellendus, maxime consequuntur culpa?</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="https://kit.fontawesome.com/695f03e4fd.js" crossorigin="anonymous"></script>
+<script src="/js/explore.js"></script>
+</html>
