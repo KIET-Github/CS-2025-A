@@ -1,0 +1,160 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1">
+<link rel="icon" href="images/fvlogo1l.png" type="image/png"
+	sizes="64x64">
+<title>ADIP</title>
+			
+			<form id="frm2" class="seminor-login-form" action=" login" method="post" autocomplete="off">
+					
+					<input type="hidden" name="_csrf" value="8973322f-0bb7-4761-8a55-60f146b49b10" />
+        
+         	<div class="modal-body">
+
+					<div class="form-group m-form__group row has-feedback ">
+					<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+								<label class="col-form-label">USERNAME</label>
+							</div>
+						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span>
+								<input id="username" name="username" onkeypress="checkEnter(this,event)" placeholder="Email Address" class="form-control" required="true" type="text" value="" autocomplete="off"/>
+							</div>
+							</div>
+						
+					</div>
+
+						<div class="form-group m-form__group row has-feedback">
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+								<label class="col-form-label">PASSWORD</label>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+									<input id="password" name="password" onkeypress="checkEnter(this,event)" placeholder="Password" class="form-control" required="true" type="text" value="" autocomplete="off"/>
+
+								</div>
+							</div>
+						</div>
+					
+					<div class="form-group m-form__group row has-feedback pad-top pad-bottom">
+					<div class="captccha col-md-4 col-lg-4 col-sm-4 col-xs-4"
+						id="loginCaptcha"
+						style="user-select: none; color: blue; font-weight: 600; font-size: 26px;">
+						</div>
+					
+						<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+							<input id="captcha" name="captcha" oninvalid="this.setCustomValidity(&#39;Please Enter captcha&#39;)" class="captcha_input" required="true" type="text" value=""/>
+						</div>
+						<div
+							class="col-md-2 col-lg-2 col-sm-2 col-xs-2 refresh"
+							onclick="changeCaptcha()">
+							<i class="fa fa-refresh" aria-hidden="true"></i>
+						</div>
+					</div>
+					
+					<div class="form-group m-form__group row has-feedback">
+
+						<div class="col-md-12 col-lg-12 col-sm-12 btn-check-log">
+							<button type="submit" value="Submit" onclick="loginSubmit()"
+								 id="Submit" name="Submit" class="submit_button"> Submit </button>
+							<!-- <input type="submit" class="btn-check-login bold font_18"
+								onclick="loginSubmit()" value="Submit"> -->
+						</div>
+					</div>
+					
+					</div>
+					
+					<div class="modal-footer ">
+					<div class="row">
+           			 <div class="col-md-6 col-sm-12"> 
+					<div class="forgot-pass-fau pt-3 pull-left">
+									<a href="#sem-resetpassword" class="text-secondary semreset red" data-toggle="modal"
+										data-target="#sem-resetpassword" id="id3" >Forgot Password?</a>
+										
+								</div>
+					
+					</div>
+                      <div class="col-md-6 col-sm-12 "> 
+                       <div class="regh pull-right" >
+							
+								<a href="get_beneficiary_registration.html"
+									class="text-seconda center white register_btn">Register Here</a>
+							</div>
+						</div>
+					
+					</div>
+				
+				</div>
+				
+				<div>
+<input type="hidden" name="_csrf" value="8973322f-0bb7-4761-8a55-60f146b49b10" />
+</div></form>
+
+      </div>
+    </div>
+  </div>
+</div>
+	<!-- The Modal -->
+	
+	<!-- 	</div> -->
+
+	<!--  reset password modal  -->
+
+	<!--  modal login -->
+	<!-- The Modal -->
+	<div class="homepage-modal modal modal-md fade "
+		data-backdrop="static" id="sem-resetpassword"
+		data-easein="slideDownBigIn" style="margin-top: 7%;">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+	<div class="modal-header">
+						<h3 class="modal-title center white" id="">Forgot Password ?</h3>
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">�</span><span class="sr-only">Close</span>
+						</button>
+						
+					</div>
+				<!-- Modal body -->
+				<div class="modal-body seminor-login-modal-body">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+							<h4>Forgot Password</h4>
+						</div>
+						<button type="button" class="close" data-dismiss="modal">
+							<span><i class="fa fa-times" aria-hidden="true"></i></span>
+						</button>
+
+					</div>
+
+
+					<form id="frm3" class="seminor-login-form" action=" forgotPassword" method="post">
+						<div class="form-group">
+							<input id="fusername" name="fusername" placeholder="Enter Username" class="form-control" type="text" value=""/>
+							
+							
+								
+							
+							
+								
+						</div>
+
+						<div class="form-group btn-check-log">
+
+
+							<input type="button" class="btn-check-login" id="forgot_btn"
+								onclick="forgotPassSubmit()" value="Submit">
+						</div>
+
+
+					<div>
+<input type="hidden" name="_csrf" value="8973322f-0bb7-4761-8a55-60f146b49b10" />
+</div></form>
+
+</body>
+	
+ 
