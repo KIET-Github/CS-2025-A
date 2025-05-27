@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Agency Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="../assets/css/ready.css">
+	<link rel="stylesheet" href="../assets/css/demo.css">
+	<link rel="stylesheet"
+	href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/homepage/latest/site.css" rel="stylesheet" />
+<!-- Theme skin -->
+<link href="css/homepage/latest/color/default.css" rel="stylesheet" />
+
+<!-- Latest compiled and minified CSS -->
+
+
+	<style>
+		table.GeneratedTable {
+		  width: 100%;
+		  background-color: #ffffff;
+		  border-collapse: collapse;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  color: #000000;
+		}
+  
+		table.GeneratedTable th {
+		  text-align: center;
+		  color: white;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  border-style: solid;
+		  padding: 3px;
+		}
+  
+		table.GeneratedTable td {
+		  text-align: center;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  border-style: solid;
+		  padding: 3px;
+		}
+  
+		table.GeneratedTable thead {
+		  text-align: center;
+		  background-color: #408080;
+		}
+	  </style>
+</head>
+<body>
+		
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					<div class="logo pull-left">
+						<a> <img src="https://cdn.discordapp.com/attachments/950668532155285508/955823459429154816/unknown.png"  style="height:100%; width:100%">
+						</a>
+					</div>
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav style="    background-color: #244270 !important;
+			border-color: #0f2951 !important;" class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+					<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+						<div class="input-group">
+							<input type="text" placeholder="Search ..." class="form-control">
+							<div class="input-group-append">
+								<span class="input-group-text">
+									<i class="la la-search search-icon"></i>
+								</span>
+							</div>
+						</div>
+					</form>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i style="color: white;"class="la la-envelope"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<!-- <li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="la la-bell"></i>
+								<span class="notification">3</span>
+							</a>
+							<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-center">
+										<a href="#">
+											<div class="notif-icon notif-primary"> <i class="la la-user-plus"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													New user registered
+												</span>
+												<span class="time">5 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-success"> <i class="la la-comment"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Rahmad commented on Admin
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-img"> 
+												<img src="../assets/img/profile2.jpg" alt="Img Profile">
+											</div>
+											<div class="notif-content">
+												<span class="block">
+													Reza send messages to you
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-danger"> <i class="la la-heart"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Farrah liked Admin
+												</span>
+												<span class="time">17 minutes ago</span> 
+											</div>
+										</a>
+									</div> -->
+								</li>
+								<li>
+									<a style="color: white;" class="see-all" href="javascript:void(0);"> <strong>See all notifications</strong> <i class="la la-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="../assets/img/profile.png" alt="user-img" width="36" class="img-circle"><span style="color: white;">Vikash Foundation</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="../assets/img/profile.png" alt="user"></div>
+										<div class="u-text">
+											<h4>Vikash Foundation</h4>
+											<p class="text-muted">hello@themekita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+										</div>
+									</li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a>
+									<a class="dropdown-item" href="#"></i> My Balance</a>
+									<a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+								</ul>
+								<!-- /.dropdown-user -->
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					<div class="user">
+						<div class="photo">
+							<img src="../assets/img/profile.png">
+						</div>
+						<div class="info">
+							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Vikash Foundation
+									<span class="user-level">Implementing Agency</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Edit Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Settings</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="index.html">
+								<i class="la la-dashboard"></i>
+								<p>Dashboard</p>
+								<span class="badge badge-count">5</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="components.html">
+								<i class="la la-table"></i>
+								<p> Pending Request</p>
+								<span class="badge badge-count">14</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="forms.html">
+								<i class="la la-keyboard-o"></i>
+								<p>Update Details</p>
+								<span class="badge badge-count">50</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="tables.html">
+								<i class="la la-th"></i>
+								<p>Tables</p>
+								<span class="badge badge-count">6</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="notifications.html">
+								<i class="la la-bell"></i>
+								<p>Notifications</p>
+								<span class="badge badge-success">3</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="typography.html">
+								<i class="la la-font"></i>
+								<p>Typography</p>
+								<span class="badge badge-danger">25</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="icons.html">
+								<i class="la la-fonticons"></i>
+								<p>Icons</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+			
+					
+							
+							
+							
+<form>
+	<fieldset style="border:2px solid gray; border-radius: 20px; margin-top:5rem;">
+	<h5 style="margin: 2rem 0 0 2rem; color:darkblue !important"> Pending Details </h5>
+		
+		<table
+      class="GeneratedTable"
+      style="width: 95%; margin: auto; margin-bottom: 2rem;  margin-top:2rem;"
+    >
+      <thead style="background-color: #539BBD !important;">
+        <tr>
+          <th style="width: 1%">S.No.</th>
+          <th style="width: 9%">Beneficiary Name</th>
+          <th style="width: 9%">Father Name</th>
+          <th style="width: 9%">Mother Name</th>
+          <th style="width: 6%">Date Of Birth</th>
+          <th style="width: 4%">Category</th>
+          <th style="width: 20%">Address</th>
+          <th style="width: 7%">Aadhar Card No.</th>
+          <th style="width: 10%">UDID No.</th>
+          <th style="width: 7%">Mobile No.</th>
+          <th style="width: 10%">Disability Type</th>
+          <th style="width: 4%">Disability Percentage</th>
+		  <th style="width: 4%">Documents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #F2F2F2;">
+          <!-- <td><input type="radio" /></td> -->
+		  <td>1.</td>
+          <td>Rahul Sharma</td>
+          <td>Pankaj Sharma</td>
+          <td>Reena Sharma</td>
+          <td>12/04/1992</td>
+          <td>General</td>
+          <td>C-216, Surya Nagar, Delhi-110092</td>
+          <td>1234 5678 99</td>
+          <td>DL2310119470007106</td>
+          <td>9898989898</td>
+          <td>Locomotive Disability</td>
+          <td>60%</td>
+		  <td><a href="download/adip1.pdf" target="_blank" title="Click Here"><i style="    display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			color: #e0a51f;
+			font-weight: 600 !important;" class="orange bold fa fa-file-pdf-o fa-1x pad-right half"></i></a></td>
+        </tr>
+
+		<tr style="background-color: #F2F2F2;">
+			<!-- <td><input type="radio" /></td> -->
+			<td>2.</td>
+			<td>Saksham Sharma</td>
+			<td>Abhishek Sharma</td>
+			<td>Snehal Sharma</td>
+			<td>12/04/1992</td>
+			<td>General</td>
+			<td>57, Rohini Nagar, Delhi-110092</td>
+			<td>1234 5678 99</td>
+			<td>DL2310116546372896</td>
+			<td>8882251858</td>
+			<td>Visually Impaired Disability</td>
+			<td>23%</td>
+			<td><a href="download/adip1.pdf" target="_blank" title="Click Here"><i style="    display: inline-block;
+				font: normal normal normal 14px/1 FontAwesome;
+				font-size: inherit;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				color: #e0a51f;
+				font-weight: 600 !important;" class="orange bold fa fa-file-pdf-o fa-1x pad-right half"></i></a></td>
+		  </tr>
+
+      </tbody>
+    </table>
+	</fieldset>
+	
+</form>
