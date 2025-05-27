@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Plag-Backend
+=======
 # CS-2025-A
 
 This repository contains the details of major project created by the students of 2025 Batch at Computer Science Department, KIET Ghaziabad.<br>
@@ -150,3 +153,4 @@ Folders of following project Ids has been created.<br>
     
   </tbody>
 </table>
+>>>>>>> 919028572048ad23fa62470a0c1844fcda04eb16
