@@ -1,0 +1,100 @@
+/* Make sure body fills the screen and uses flexbox to center content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;   /* full viewport height */
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px; /* leave space for fixed topbar */
+}
+
+/* Background blur */
+.background-blur {
+  background: url('../images/voting-bg.webp') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(6px);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+}
+
+/* Fixed topbar */
+.topbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 3px 12px rgba(123, 47, 247, 0.7);
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 34px;
+  z-index: 999;
+}
+
+/* Container and box styling */
+.connect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.connect-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90vw;
+  text-align: center;
+}
+
+/* Bigger Connect button */
+#connectBtn {
+  padding: 20px 45px;     /* bigger padding */
+  font-size: 22px;        /* bigger font */
+  border-radius: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 0 10px #4caf50;
+  transition: box-shadow 0.4s ease-in-out, background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#connectBtn:hover {
+  background-color: #388e3c;
+  box-shadow:
+    0 0 18px #4caf50,
+    0 0 28px #66bb6a,
+    0 0 38px #81c784;
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+  from {
+    box-shadow:
+      0 0 18px #4caf50,
+      0 0 28px #66bb6a,
+      0 0 38px #81c784;
+  }
+  to {
+    box-shadow:
+      0 0 28px #4caf50,
+      0 0 38px #66bb6a,
+      0 0 48px #81c784;
+  }
+}

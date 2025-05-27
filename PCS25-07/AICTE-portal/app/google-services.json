@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "151675660316",
+    "project_id": "aicte-portal-c36ed",
+    "storage_bucket": "aicte-portal-c36ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151675660316:android:bdde8033eb9560611c17d9",
+        "android_client_info": {
+          "package_name": "com.example.aicteapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpleKUvndjnfc88a9Q_nNEAT9x3yyFUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

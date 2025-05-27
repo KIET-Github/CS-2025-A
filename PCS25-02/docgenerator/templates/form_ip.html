@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IP Agreement Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url("/static/images/image.png") no-repeat center center fixed;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 2px solid #B85C0F;
+      border-radius: 12px;
+      padding: 30px;
+      width: 90%;
+      max-width: 1200px;
+      box-shadow: 0 0 20px #B85C0F;
+    }
+
+    h2 {
+      text-align: center;
+      color: #B85C0F;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      color: #FFD580;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      border: 2px solid #B85C0F;
+      border-radius: 5px;
+      background-color: #B85C0F;
+      color: black;
+      font-weight: bold;
+    }
+
+    input::placeholder {
+      color: black;
+      opacity: 0.8;
+    }
+
+    input[type="submit"] {
+      background-color: black;
+      color: #B85C0F;
+      font-weight: bold;
+      cursor: pointer;
+      border: 2px solid #B85C0F;
+      transition: 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #B85C0F;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Intellectual Property Agreement Form</h2>
+    <form action="/submit/ip" method="POST">
+      <div class="form-group">
+        <label>Date:</label>
+        <input type="date" name="date">
+      </div>
+      <div class="form-group">
+        <label>Employee Name:</label>
+        <input type="text" name="name1" placeholder="Employee Name">
+      </div>
+      <div class="form-group">
+        <label>Employee Address:</label>
+        <input type="text" name="address1" placeholder="Employee Address">
+      </div>
+      <div class="form-group">
+        <label>Employer Name:</label>
+        <input type="text" name="name2" placeholder="Employer Name">
+      </div>
+      <div class="form-group">
+        <label>Employer Address:</label>
+        <input type="text" name="address2" placeholder="Employer Address">
+      </div>
+      <div class="form-group">
+        <label>Invention 1:</label>
+        <input type="text" name="invention1" placeholder="Invention 1">
+      </div>
+      <div class="form-group">
+        <label>Invention 2:</label>
+        <input type="text" name="invention2" placeholder="Invention 2">
+      </div>
+      <div class="form-group">
+        <label>Invention 3:</label>
+        <input type="text" name="invention3" placeholder="Invention 3">
+      </div>
+      <div class="form-group">
+        <label>Start Date:</label>
+        <input type="date" name="date_of_beginning">
+      </div>
+      <div class="form-group">
+        <label>End Date:</label>
+        <input type="date" name="end_date">
+      </div>
+      <div class="form-group">
+        <label>Governing Law:</label>
+        <input type="text" name="law" placeholder="Governing Law">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Email">
+      </div>
+      <div class="form-group" style="grid-column: span 2;">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
