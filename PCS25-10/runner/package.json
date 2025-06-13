@@ -1,0 +1,19 @@
+{
+  "name": "runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predict-vite": "cd ../predict/weather-prediction && npx vite --port 5174",
+    "predict-py": "cd ../predict/weather-prediction && set PYTHONIOENCODING=utf-8 && python predict_api.py",
+    "brainwave": "cd ../brainwave-main && npx vite --port 5173",
+    "server": "cd ../server && node server.js",
+    "start-all": "concurrently \"npm run predict-vite\" \"npm run predict-py\" \"npm run brainwave\" \"npm run server\" --names \"VITE-P\",\"PY\",\"VITE-B\",\"NODE\" --prefix-colors \"blue,cyan,magenta,green\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
