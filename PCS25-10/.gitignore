@@ -1,0 +1,17 @@
+# Ignore all node_modules folders recursively
+**/node_modules/
+
+# Ignore all .env files recursively
+**/.env
+
+# Ignore build outputs
+**/dist/
+
+# Python cache
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+
+# Misc
+.DS_Store
+.env
