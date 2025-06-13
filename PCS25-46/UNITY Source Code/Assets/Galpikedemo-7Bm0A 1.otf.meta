@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b73b738ce4de2db4dbcbe779f0792798
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Galpike Demo
+  fontNames:
+  - Galpike Demo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d7c17f33237525a48b31bc49e4741c24, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
